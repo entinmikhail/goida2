@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "goida", "goida\goida.csproj", "{EEB25CFF-1DF4-4874-976E-EEDE31AE1B5F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "goida.Tests", "goida.Tests\goida.Tests.csproj", "{F35D52D3-F1B0-43D7-88A4-5A6918EEC81C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{EEB25CFF-1DF4-4874-976E-EEDE31AE1B5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EEB25CFF-1DF4-4874-976E-EEDE31AE1B5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EEB25CFF-1DF4-4874-976E-EEDE31AE1B5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F35D52D3-F1B0-43D7-88A4-5A6918EEC81C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F35D52D3-F1B0-43D7-88A4-5A6918EEC81C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F35D52D3-F1B0-43D7-88A4-5A6918EEC81C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F35D52D3-F1B0-43D7-88A4-5A6918EEC81C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
