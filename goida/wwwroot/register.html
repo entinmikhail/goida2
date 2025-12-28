@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Регистрация</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2rem; }
+    form { max-width: 400px; }
+    label { display: block; margin-top: 1rem; }
+    input { width: 100%; padding: 0.5rem; }
+    button { margin-top: 1rem; padding: 0.5rem 1rem; }
+    pre { background: #f4f4f4; padding: 1rem; }
+  </style>
+</head>
+<body>
+  <h1>Регистрация соискателя</h1>
+  <form id="register-form">
+    <label>ФИО / Display Name
+      <input type="text" name="displayName" required />
+    </label>
+    <label>Email
+      <input type="email" name="email" required />
+    </label>
+    <label>Пароль
+      <input type="password" name="password" required />
+    </label>
+    <button type="submit">Зарегистрироваться</button>
+  </form>
+  <pre id="output">—</pre>
+  <script>
+    const form = document.getElementById('register-form');
+    const output = document.getElementById('output');
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const formData = new FormData(form);
+      const payload = {
+        displayName: formData.get('displayName'),
+        email: formData.get('email'),
+        password: formData.get('password')
+      };
+      const response = await fetch('/api/auth/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      if (!response.ok) {
+        output.textContent = 'Ошибка регистрации';
+        return;
+      }
+      output.textContent = 'Готово. Теперь можно войти.';
+    });
+  </script>
+</body>
+</html>
