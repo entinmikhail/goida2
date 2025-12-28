@@ -1,0 +1,6 @@
+@goida_HostAddress = http://localhost:5239
+
+GET {{goida_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
